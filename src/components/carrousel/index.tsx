@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Slider from "react-slick";
 import qrcode from "../../assets/qrcode.svg";
 import "./styles.css";
 
 function Carousel() {
   const sliderRef = useRef<any>(null);
-  console.log(sliderRef);
   const [Refresh, setRefresh] = useState(true);
   const iframeRef = useRef<any>(null);
   const settings = {
@@ -17,19 +16,10 @@ function Carousel() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 30000,
-    // Set the duration (in milliseconds) between slides
+    beforeChange: () => {
+      setRefresh(!Refresh);
+    },
   };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setRefresh(false);
-      setTimeout(() => {
-        setRefresh(true);
-      }, 100);
-    }, 30000);
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   const avancarProximo = () => {
     sliderRef?.current?.slickNext();
@@ -43,7 +33,7 @@ function Carousel() {
             id="apresentacaoframe"
             ref={iframeRef}
             src={"https://mb.triagil.com.br/public/dashboard/052b4ec4-f3be-4db0-80b3-5c5c40c56cc8"}
-            title=""
+            title="resultados autorizai"
             style={{ width: "100%", height: "100%" }}
           />
         )}
