@@ -14,13 +14,50 @@
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
-    gap: 20px;
     padding: 50px;
     
 }
 
+.autorizaititle {
+    height: fit-content;
+}
+
+.secondContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    gap: 80px;
+}
+
 .alexa h1 {
    width: 1000px;
+   color: #3aecf9;
+   font-size: 37px;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.alexa h2 {
+width: 100%;
+letter-spacing: 1px;
+font-size: 28px;
+font-weight: normal;
+margin: auto;
+padding-left: 40px;
+}
+
+
+.textsecondcontainer {
+    width: 320px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: right;
 }

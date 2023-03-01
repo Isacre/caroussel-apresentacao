@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import Slider from "react-slick";
 import qrcode from "../../assets/qrcode.svg";
+import logo from "../../assets/logo.png";
 import "./styles.css";
 
 function Carousel() {
@@ -14,11 +15,12 @@ function Carousel() {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 30000,
     beforeChange: () => {
       setRefresh(!Refresh);
     },
+    draggable: false,
   };
 
   const avancarProximo = () => {
@@ -40,9 +42,20 @@ function Carousel() {
       </div>
       <div className="container" onClick={avancarProximo}>
         <div className="alexa">
-          <h1>Autorizaí, a Alexa para análise da pertinência clínica!</h1>
-          <h2>Participe do sorteio da Alexa última geração.</h2>
-          <img height={200} src={qrcode} alt="qrcode" style={{ backgroundColor: "rgba(0,0,0,0.2)", borderRadius: 5 }} />
+          <h1 style={{ fontSize: 80, fontWeight: "normal" }} className="autorizaititle">
+            Autorizaí,
+          </h1>
+          <b className="subtitle">a Alexa para Análise da Pertinência Clínica.</b>
+          <div className="secondContainer">
+            <div className="textsecondcontainer">
+              <h2>
+                Participe do <b>Sorteio</b> de uma Alexa de Última Geração.
+              </h2>
+              <p>Preencha o formulário no QR Code ao lado.</p>
+            </div>
+            <img height={200} src={qrcode} alt="qrcode" style={{ backgroundColor: "rgba(0,0,0,0.2)", borderRadius: 5 }} />
+          </div>
+          <img style={{ marginTop: 50 }} width={200} src={logo} alt="triagillogo" />
         </div>
       </div>
     </Slider>

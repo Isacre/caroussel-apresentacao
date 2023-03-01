@@ -1,7 +1,12 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url(/src/assets/fontes/AvenirLTStd-Book.otf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Avenir', sans-serif;
 }
