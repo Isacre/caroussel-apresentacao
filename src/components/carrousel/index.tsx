@@ -15,8 +15,8 @@ function Carousel() {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 30000,
+    autoplay: true,
+    autoplaySpeed: 15000,
     beforeChange: () => {
       setRefresh(!Refresh);
     },
