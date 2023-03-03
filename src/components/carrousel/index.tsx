@@ -42,9 +42,7 @@ function Carousel() {
       </div>
       <div className="container" onClick={avancarProximo}>
         <div className="alexa">
-          <h1 style={{ fontSize: 80, fontWeight: "normal" }} className="autorizaititle">
-            Autorizaí,
-          </h1>
+          <h1 className="autorizaititle">Autorizaí,</h1>
           <b className="subtitle">a Alexa para Análise da Pertinência Clínica.</b>
           <div className="secondContainer">
             <div className="textsecondcontainer">
@@ -53,9 +51,9 @@ function Carousel() {
               </h2>
               <p>Preencha o formulário no QR Code ao lado.</p>
             </div>
-            <img height={200} src={qrcode} alt="qrcode" style={{ backgroundColor: "rgba(0,0,0,0.2)", borderRadius: 5 }} />
+            <img height={200} src={qrcode} alt="qrcode" className="qrcode" />
           </div>
-          <img style={{ marginTop: 50 }} width={200} src={logo} alt="triagillogo" />
+          <img src={logo} alt="triagillogo" className="triagillogo" />
         </div>
       </div>
     </Slider>
